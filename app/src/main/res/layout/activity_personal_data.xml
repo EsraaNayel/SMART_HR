@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <TextView
+        android:id="@+id/ActivityTilte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Personal_data"
+        android:layout_marginTop="7dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/backbutton"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/homebtn"
+        android:layout_gravity="left"
+        android:background="@null"
+        android:src="@drawable/ic_left_arrow" />
+
+    <ImageButton
+        android:id="@+id/homebtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/scrollView"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:background="@null"
+        android:src="@drawable/ic_home" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+
+        <RelativeLayout
+            android:id="@+id/RL_Grand"
+            android:layout_width="match_parent"
+            android:layout_height="302dp">
+
+            <RelativeLayout
+                android:id="@+id/RL_photo"
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:background="@drawable/backgroundprofile">
+
+                <com.meg7.widget.CustomShapeImageView
+                    android:id="@+id/personal_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_profile"
+                    app:shape="circle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/allElementAfterImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/RL_photo">
+
+                <TextView
+                    android:id="@+id/tv_Code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Code "
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Code"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_emp_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_Code"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_name"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Name"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_contact_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_phone"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_contactMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_contact"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_contact_Mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_mobile"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_contactMobile"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_Email"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/devider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/color_dark_purple"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/ll_email">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_Gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_email"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_Gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_gender"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_Bdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_Gender"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_Bdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_Bdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_bdate"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_ssn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_Bdate"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_ssn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_ssn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_ssn"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_Social_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_Address"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_socialStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_socialStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_social_status"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_ssn"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_address"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/devider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/color_dark_purple"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/ll_Social_status">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_graduationYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_Social_status"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_graduation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_graduationYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_graduate_year"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_qualifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_graduationYear"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_qualifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000" />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_qualifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_qualification"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_Job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_qualifications"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_Job"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_Job"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_Job"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_workPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_Job"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_workPlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_workPlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_work_place"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_below="@+id/Name"-->
+                    <!--android:weightSum="2"-->
+                    <!--&gt;-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_contact_mobile"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_mobile"-->
+                        <!--android:textSize="20sp" />-->
+
+                    <!---->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_emp_email"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/ll_contact"-->
+                    <!--android:layout_marginEnd="7dp"-->
+                    <!--android:text="@string/emp_Email"-->
+                    <!--android:textSize="20sp" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_address"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/tv_emp_email"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="2">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_emp_Bdate"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_below="@+id/tv_emp_gender"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_bdate"-->
+                        <!--android:textSize="20sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_emp_gender"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+
+                        <!--android:layout_below="@+id/tv_emp_email"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_gender"-->
+                        <!--android:textSize="20sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_emp_ssn"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_below="@+id/ll_address"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:layout_marginEnd="7dp"-->
+                    <!--android:layout_marginStart="7dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text="@string/emp_ssn"-->
+                    <!--android:textSize="20sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_emp_address"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_below="@+id/tv_emp_ssn"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:layout_marginEnd="7dp"-->
+                    <!--android:layout_marginStart="7dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text="@string/emp_address"-->
+                    <!--android:textSize="20sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_emp_social_status"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_below="@+id/tv_emp_address"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:layout_marginEnd="7dp"-->
+                    <!--android:layout_marginStart="7dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text="@string/emp_social_status"-->
+                    <!--android:textSize="20sp" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_qualifications"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/tv_emp_social_status"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="2">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_emp_qualification"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_below="@+id/tv_emp_graduation_year"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_qualification"-->
+                        <!--android:textSize="20sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_emp_graduation_year"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_below="@+id/tv_emp_social_status"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_graduate_year"-->
+                        <!--android:textSize="20sp" />-->
+
+
+                <!--</LinearLayout>-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ll_Job"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/ll_qualifications"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:weightSum="2">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_emp_work_place"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_below="@+id/tv_emp_Job"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_work_place"-->
+                        <!--android:textSize="20sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_emp_Job"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_below="@+id/tv_emp_graduation_year"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:layout_marginEnd="7dp"-->
+                        <!--android:layout_marginStart="7dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:text="@string/emp_Job"-->
+                        <!--android:textSize="20sp" />-->
+
+
+                <!--</LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/tv_emp_timeOfWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/ll_workPlace"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/emp_timeToWork"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_timeToWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_emp_timeOfWork"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_To"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tv_From"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/To"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_From"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tv_emp_timeOfWork"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/from"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_weekend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_timeToWork"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_weekend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_weekend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/ll_timeToWork"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_weekend"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_management"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_weekend"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_managment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_emp_management"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/emp_management"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">SMART HR</string>
+    <string name="Personal_data">البيانات الشخصية </string>
+    <string name="All_exceptions">الأذونات </string>
+    <string name="request_exception">طلب إذن</string>
+    <string name="all_Vacations">الأجازات</string>
+    <string name="requestVacations">طلب أجازة</string>
+    <string name="Attendance">الحضور و الانصراف</string>
+
+    <string name="err_username_required">برجاء ادخال الإسم </string>
+    <string name="err_phone_required">برجاء ادخال رقم العميل </string>
+    <string name="search_data">البحـــث</string>
+    <string name="map_data">الخــرائط</string>
+    <string name="settings_data">الاعدادات</string>
+    <string name="Vacations">الأجازات </string>
+
+    <string name="emp_name">إسم الموظف : </string>
+    <string name="emp_mobile">الموبايل : </string>
+    <string name="emp_phone"> الهاتف : </string>
+    <string name="emp_address">العنوان : </string>
+    <string name="emp_gender">النوع : </string>
+    <string name="emp_Email"> البريد الالكتروني : </string>
+    <string name="emp_bdate">تاريخ الميلاد : </string>
+    <string name="emp_ssn">الرقم القومي : </string>
+    <string name="emp_graduate_year">سنة التخرج : </string>
+    <string name="emp_qualification">المؤهل : </string>
+    <string name="emp_Job">الوظيفة : </string>
+    <string name="emp_social_status">الحالة الاجتماعية : </string>
+    <string name="emp_work_place">مكان العمل : </string>
+    <string name="emp_weekend">الأجازة الإسبوعية : </string>
+    <string name="emp_timeToWork">مواعيد العمل </string>
+    <string name="from">من: </string>
+    <string name="To">إلى : </string>
+    <string name="emp_management">الإدارة : </string>
+
+    <string name="Hours">عدد الساعات</string>
+    <string name="date">التاريخ</string>
+    <string name="Timefrom">الفترة من :</string>
+
+
+
+    <string name="requestExcption">أذون</string>
+    <string name="excp_Condition">الحالة</string>
+    <string name="excp_type">نوع الإذن </string>
+
+    <string name="requestVacation">أجازة </string>
+    <string name="vac_type">نوع الأجازة </string>
+    <string name="vac_condition">الحالة </string>
+    <string name="vac_timeFrom">الفترة من </string>
+    <string name="vac_timeTo">إلى </string>
+    <string name="vac_days">عدد الأيام</string>
+    <string name="vac_date">الناريخ</string>
+
+    <string name="btn_getAll">عرض الأذون </string>
+    <string name="btn_request_exception">طلب إذن </string>
+    <string name="btn_getAllVac">عرض الأجازات </string>
+    <string name="btn_request_vacation">طلب اجازة </string>
+
+    
+    <string name="Record_attendance">سجل الحضور و الإنصراف </string>
+    <string name="Time_IN">وقت الحضور </string>
+    <string name="Time_out">وقت الانصراف</string>
+    <string name="Machine_id">الماكينة</string>
+
+
+    <string-array name="LoginList">
+        <item >ADMIN-SMART</item>
+        <item>nagy nasser</item>
+        <item >USER1</item>
+    </string-array>
+
+
+    <style name="DefaultButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#979797</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:shadowColor">#f9f9f9</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+</resources>
